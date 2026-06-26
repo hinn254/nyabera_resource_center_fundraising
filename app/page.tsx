@@ -124,7 +124,7 @@ export default function Home() {
               Nyabera Resource Center
             </a>
             <div className="hidden items-center gap-7 text-sm font-semibold text-white/82 md:flex">
-              <a href="#why" className="transition hover:text-white">
+              <a href="#programme" className="transition hover:text-white">
                 Programme
               </a>
               <a href="#committee" className="transition hover:text-white">
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why" className="bg-[#fffaf0] px-5 py-20 sm:px-8 lg:py-28">
+      <section id="programme" className="scroll-mt-20 bg-[#fffaf0] px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
@@ -215,7 +215,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="committee" className="bg-[#173a32] px-5 py-20 text-white sm:px-8 lg:py-28">
+      <section id="committee" className="scroll-mt-20 bg-[#173a32] px-5 py-20 text-white sm:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="max-w-3xl">
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f2c14e]">Built for follow-through</p>
@@ -242,7 +242,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pledge" className="bg-[#f7f3eb] px-5 py-20 sm:px-8 lg:py-28">
+      <section id="pledge" className="scroll-mt-20 bg-[#f7f3eb] px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
@@ -275,7 +275,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="signup" className="bg-[#fffaf0] px-5 py-20 sm:px-8 lg:py-28">
+      <section id="signup" className="scroll-mt-20 bg-[#fffaf0] px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="lg:sticky lg:top-8">
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#b3432f]">Reserve your place</p>
