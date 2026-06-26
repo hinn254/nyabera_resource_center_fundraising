@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nyabera Resource Center Fundraiser",
   description:
-    "Register, refer, give, or pledge support for the Nyabera Resource Center fundraiser in Awendo.",
+    "Register, refer, give, or pledge support for Nyabera's community hall, virtual library, skills workshops, and solar cold storage hub.",
 };
 
 export default function RootLayout({
