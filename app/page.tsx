@@ -53,8 +53,8 @@ const programmes = [
 const pledgeOptions = [
   {
     amount: "01",
-    title: "Attend and bring energy",
-    copy: "Fill the room, bring a friend, and help the fundraiser feel like the launch of a serious community asset.",
+    title: "Attend and confirm your seat",
+    copy: "Arrive by 9:00 AM, join the programme from 10:00 AM, and help make the fundraiser feel like a serious community launch.",
   },
   {
     amount: "02",
@@ -65,6 +65,72 @@ const pledgeOptions = [
     amount: "03",
     title: "Pledge cash, equipment, or expertise",
     copy: "Support the hall, virtual library, craft workshop, tailoring and knitting training, or solar cold storage and packaging line.",
+  },
+];
+
+const eventProgram = [
+  {
+    time: "9:00 AM",
+    title: "Arrival, registration, and seating",
+    detail: "Guests are welcomed, RSVPs confirmed, pledge interests noted, and VIP protocol handled before the formal programme begins.",
+  },
+  {
+    time: "10:00 AM",
+    title: "Opening prayer, national values, and welcome",
+    detail: "A focused opening sets the tone, introduces the committee, and recognizes local leaders, invited guests, and community groups.",
+  },
+  {
+    time: "10:20 AM",
+    title: "Entertainment and community presentations",
+    detail: "Short cultural items, youth presentations, and community voices keep the room warm while pointing back to the center's purpose.",
+  },
+  {
+    time: "10:50 AM",
+    title: "Resource center vision and project brief",
+    detail: "The committee presents the hall, virtual library, handicrafts workshop, tailoring and knitting training, and solar cold storage plan.",
+  },
+  {
+    time: "11:20 AM",
+    title: "Remarks from guests and local leaders",
+    detail: "Selected speakers give brief, timed remarks on education, skills, enterprise, agriculture, and community development.",
+  },
+  {
+    time: "12:10 PM",
+    title: "Guest of Honour address",
+    detail: "Hon. Eddy Oketch, Migori Senator, addresses the gathering and helps mobilize support for the resource center.",
+  },
+  {
+    time: "12:40 PM",
+    title: "Fundraising, pledges, and partner appeal",
+    detail: "The fundraising lead guides cash giving, M-Pesa contributions, bank pledges, equipment support, referrals, and technical partnerships.",
+  },
+  {
+    time: "2:00 PM",
+    title: "Refreshments, networking, and pledge desk follow-up",
+    detail: "Guests refresh, meet the committee, confirm pledges, and share referrals before the close of the day.",
+  },
+  {
+    time: "2:45 PM",
+    title: "Vote of thanks and closing prayer",
+    detail: "The committee thanks supporters, repeats next steps, and closes the formal programme by 3:00 PM.",
+  },
+];
+
+const paymentOptions = [
+  {
+    label: "M-Pesa contribution",
+    primary: "Send to 0710550432",
+    detail: "Use this number for direct M-Pesa contributions and pledge follow-up.",
+  },
+  {
+    label: "Bank contribution",
+    primary: "ABSA Bank",
+    detail: "PayBill 303030 | Account 2031478548",
+  },
+  {
+    label: "RSVP",
+    primary: "Call or WhatsApp 0710550432",
+    detail: "Confirm attendance, number of guests, pledge intent, or referral details.",
   },
 ];
 
@@ -124,21 +190,24 @@ export default function Home() {
               Nyabera Resource Center
             </a>
             <div className="hidden items-center gap-7 text-sm font-semibold text-white/82 md:flex">
-              <a href="#programme" className="transition hover:text-white">
-                Programme
+              <a href="#center" className="transition hover:text-white">
+                The center
+              </a>
+              <a href="#event-program" className="transition hover:text-white">
+                Event programme
               </a>
               <a href="#committee" className="transition hover:text-white">
                 Committee
               </a>
               <a href="#pledge" className="transition hover:text-white">
-                Give or refer
+                Pay or pledge
               </a>
             </div>
             <a
               href="#signup"
               className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#f2c14e] px-5 text-sm font-black text-[#18231d] shadow-[0_12px_30px_rgba(0,0,0,0.22)] transition hover:bg-white"
             >
-              Register
+              RSVP
             </a>
           </nav>
         </div>
@@ -146,48 +215,52 @@ export default function Home() {
         <div id="top" className="relative z-10 mx-auto flex min-h-[92vh] max-w-7xl items-center px-5 pb-16 pt-28 sm:px-8 lg:pt-36">
           <div className="max-w-3xl">
             <p className="mb-6 inline-flex rounded-full border border-white/20 bg-white/12 px-4 py-2 text-sm font-bold text-[#f8df98] backdrop-blur-md">
-              Nyabera, Awendo | Guest of Honour: Hon. Eddy Oketch, Migori Senator
+              Saturday, 1 August 2026 | Arrival 9:00 AM | Nyabera, Awendo
             </p>
             <h1 className="max-w-4xl text-5xl font-black leading-[1.02] tracking-normal text-white sm:text-6xl lg:text-7xl">
-              Build Nyabera&apos;s home for learning, craft, enterprise, and market access.
+              Join the fundraiser to equip Nyabera&apos;s center for skills, enterprise, and market access.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/86 sm:text-xl">
-              A multi-purpose community hall, virtual library, practical skills workshop, and solar-powered
-              cold storage hub can turn local talent and high-value horticulture into opportunity that lasts.
+              Guest of Honour Hon. Eddy Oketch, Migori Senator, joins local leaders, guests, and the community
+              for a focused fundraising programme from 10:00 AM to 3:00 PM.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#signup"
                 className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#f2c14e] px-7 text-base font-black text-[#18231d] shadow-[0_18px_40px_rgba(0,0,0,0.26)] transition hover:-translate-y-0.5 hover:bg-white"
               >
-                Sign up to attend
+                RSVP for 1 August
               </a>
               <a
                 href="#pledge"
                 className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/28 bg-white/10 px-7 text-base font-black text-white backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white hover:text-[#18231d]"
               >
-                Refer, give, or pledge
+                See payment options
               </a>
             </div>
-            <dl className="mt-12 grid max-w-2xl grid-cols-3 overflow-hidden rounded-[8px] border border-white/15 bg-white/12 text-white backdrop-blur-md">
+            <dl className="mt-12 grid max-w-3xl grid-cols-2 overflow-hidden rounded-[8px] border border-white/15 bg-white/12 text-white backdrop-blur-md sm:grid-cols-4">
               <div className="border-r border-white/15 p-4">
-                <dt className="text-xs font-bold uppercase text-white/62">Location</dt>
-                <dd className="mt-1 text-lg font-black">Nyabera</dd>
+                <dt className="text-xs font-bold uppercase text-white/62">Date</dt>
+                <dd className="mt-1 text-lg font-black">1 Aug</dd>
               </div>
               <div className="border-r border-white/15 p-4">
-                <dt className="text-xs font-bold uppercase text-white/62">Focus</dt>
-                <dd className="mt-1 text-lg font-black">Skills</dd>
+                <dt className="text-xs font-bold uppercase text-white/62">Arrival</dt>
+                <dd className="mt-1 text-lg font-black">9:00 AM</dd>
+              </div>
+              <div className="border-r border-white/15 p-4">
+                <dt className="text-xs font-bold uppercase text-white/62">Programme</dt>
+                <dd className="mt-1 text-lg font-black">10AM-3PM</dd>
               </div>
               <div className="p-4">
-                <dt className="text-xs font-bold uppercase text-white/62">Action</dt>
-                <dd className="mt-1 text-lg font-black">Pledge</dd>
+                <dt className="text-xs font-bold uppercase text-white/62">RSVP</dt>
+                <dd className="mt-1 text-lg font-black">0710550432</dd>
               </div>
             </dl>
           </div>
         </div>
       </section>
 
-      <section id="programme" className="scroll-mt-20 bg-[#fffaf0] px-5 py-20 sm:px-8 lg:py-28">
+      <section id="center" className="scroll-mt-20 bg-[#fffaf0] px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
@@ -211,6 +284,40 @@ export default function Home() {
                 <p className="max-w-3xl text-base leading-7 text-[#56635b]">{item.copy}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="event-program" className="scroll-mt-20 bg-[#f7f3eb] px-5 py-20 sm:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div className="lg:sticky lg:top-8">
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#b3432f]">Event programme</p>
+              <h2 className="mt-4 text-4xl font-black leading-tight text-[#18231d] sm:text-5xl">
+                A professional fundraising day with clear moments for guests, leaders, giving, and fellowship.
+              </h2>
+              <div className="mt-8 grid gap-3 border-y border-[#d9ccb6] py-5">
+                <p className="text-base font-extrabold text-[#18231d]">Saturday, 1 August 2026</p>
+                <p className="text-base font-semibold text-[#536157]">Arrival and registration: 9:00 AM</p>
+                <p className="text-base font-semibold text-[#536157]">Formal programme: 10:00 AM - 3:00 PM</p>
+                <p className="text-base font-semibold text-[#536157]">RSVP: 0710550432</p>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-[8px] border border-[#d9ccb6] bg-[#fffaf0]">
+              {eventProgram.map((item) => (
+                <article
+                  key={item.time}
+                  className="grid gap-4 border-b border-[#d9ccb6] bg-white/45 p-6 last:border-b-0 sm:grid-cols-[110px_1fr] lg:p-7"
+                >
+                  <p className="text-sm font-black text-[#b3432f]">{item.time}</p>
+                  <div>
+                    <h3 className="text-xl font-black leading-tight text-[#18231d]">{item.title}</h3>
+                    <p className="mt-3 leading-7 text-[#536157]">{item.detail}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -246,21 +353,31 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#1c8a68]">Three ways to help</p>
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#1c8a68]">Give, pledge, or RSVP</p>
               <h2 className="mt-4 text-4xl font-black leading-tight text-[#18231d] sm:text-5xl">
-                Bring attendance, influence, or resources.
+                Support the fundraiser before, during, or after the event.
               </h2>
               <p className="mt-5 text-lg leading-8 text-[#536157]">
-                The strongest pledges are specific. Help fit out a hall, connect a virtual library, equip a workshop,
-                train makers, or support solar cold storage and packaging for horticultural crops.
+                Contributions can be sent by M-Pesa or bank. You can also RSVP, pledge equipment, refer a partner,
+                or support a specific part of the center.
               </p>
             </div>
             <a
               href="#signup"
               className="inline-flex min-h-12 w-fit items-center justify-center rounded-full bg-[#b3432f] px-6 text-sm font-black text-white shadow-[0_16px_34px_rgba(179,67,47,0.22)] transition hover:-translate-y-0.5 hover:bg-[#173a32]"
             >
-              Start with your name
+              RSVP or pledge now
             </a>
+          </div>
+
+          <div className="mt-12 grid gap-4 lg:grid-cols-3">
+            {paymentOptions.map((option) => (
+              <article key={option.label} className="rounded-[8px] border border-[#173a32]/16 bg-[#173a32] p-6 text-white shadow-[0_20px_55px_rgba(23,58,50,0.14)]">
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#f2c14e]">{option.label}</p>
+                <p className="mt-4 text-2xl font-black leading-tight">{option.primary}</p>
+                <p className="mt-3 leading-7 text-white/72">{option.detail}</p>
+              </article>
+            ))}
           </div>
 
           <div className="mt-12 overflow-hidden rounded-[8px] border border-[#d9ccb6] bg-[#fffaf0]">
@@ -280,17 +397,18 @@ export default function Home() {
           <div className="lg:sticky lg:top-8">
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#b3432f]">Reserve your place</p>
             <h2 className="mt-4 text-4xl font-black leading-tight text-[#18231d] sm:text-5xl">
-              Tell the committee where your support fits.
+              RSVP, pledge, or share your contribution plan.
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#4e5b52]">
-              Register to attend the fundraiser with Hon. Eddy Oketch, Migori Senator, as Guest of Honour. Add a
-              pledge, referral, or technical note so the team can match your support to the right part of the center.
+              Register for Saturday, 1 August 2026. Arrival is from 9:00 AM, with the formal programme running
+              from 10:00 AM to 3:00 PM. You can also RSVP directly on 0710550432.
             </p>
             <div className="mt-8 border-y border-[#d9ccb6] py-5">
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#1c8a68]">Useful pledges include</p>
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#1c8a68]">Contribution details</p>
               <p className="mt-3 text-base font-bold leading-7 text-[#18231d]">
-                books, computers, internet access, hall furniture, sewing machines, knitting tools, craft equipment,
-                cold-room components, packaging materials, solar equipment, training time, and cash.
+                M-Pesa: send to 0710550432. Bank: ABSA Bank, PayBill 303030, Account Number 2031478548.
+                Useful pledges include cash, books, computers, hall furniture, sewing machines, knitting tools,
+                craft equipment, cold-room components, packaging materials, solar equipment, and training time.
               </p>
             </div>
           </div>
@@ -347,7 +465,7 @@ export default function Home() {
                 name="note"
                 rows={5}
                 className="mt-2 w-full rounded-[8px] border border-white/16 bg-white px-4 py-3 text-base text-[#18231d] outline-none transition focus:border-[#f2c14e] focus:ring-4 focus:ring-[#f2c14e]/18"
-                placeholder="Example: I can pledge KSh..., donate sewing machines, introduce a buyer, support solar cold storage..."
+                placeholder="Example: I will attend, I sent M-Pesa, I can pledge KSh..., donate sewing machines, introduce a buyer..."
               />
             </label>
 
